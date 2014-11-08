@@ -190,6 +190,7 @@ function tasks_get_possible_actions($task, $user_guid = 0) {
 function tasks_prepare_radio_options($task) {
 	
 	$actions = tasks_get_possible_actions($task);
+	print_r($actions);
 	
 	$actions_labels = array(
 		elgg_echo("tasks:state:action:noaction", array($task->status)) => '',
