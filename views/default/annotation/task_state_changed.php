@@ -8,7 +8,7 @@
  */
 
 $annotation = $vars['annotation'];
-
+//print_r($annotation);
 $owner = get_entity($annotation->owner_guid);
 if (!$owner) {
 	return true;

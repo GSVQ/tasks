@@ -185,21 +185,22 @@ function tasks_get_possible_actions($task, $user_guid = 0) {
 	}
 	
 	return tasks_get_actions_from_state($status);
+	
 }
 
 function tasks_prepare_radio_options($task) {
 	
 	$actions = tasks_get_possible_actions($task);
-	print_r($actions);
+	//print_r($actions);
 	
-	$actions_labels = array(
-		elgg_echo("tasks:state:action:noaction", array($task->status)) => '',
-	);
+	$actions_labels = array();
+	//	elgg_echo("tasks:state:action:noaction", array($task->status)) => '',
+	//);
 	
 	foreach($actions as $action) {
 		$actions_labels[elgg_echo("tasks:state:action:$action")] = $action;
 	}
-	
+	//print_r($actions_labels);
 	return $actions_labels;
 }
 

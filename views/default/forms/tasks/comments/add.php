@@ -20,15 +20,16 @@ if (isset($vars['entity']) && elgg_is_logged_in()) {
 	} else {
 ?>
 	<div>
-		<label><?php echo elgg_echo("generic_comments:add"); ?></label>
-		<?php echo elgg_view('input/longtext', array('name' => 'generic_comment')); ?>
-		<br /><label><?php echo elgg_echo('tasks:state:actions'); ?></label>
+		
+		<label><?php echo elgg_echo('tasks:state:actions'); ?></label>
 		<?php
 		echo elgg_view('input/radio', array(
 			'name' => 'state_action',
 			'options' => tasks_prepare_radio_options($vars['entity']),
-		));
-		?>
+		));?>
+		<br /><label><?php echo elgg_echo("generic_comments:add"); ?></label>
+		<?php echo elgg_view('input/longtext', array('name' => 'generic_comment')); ?>
+		
 	</div>
 	<div class="elgg-foot">
 <?php
